@@ -5,6 +5,11 @@ header {
   display: flex;
   justify-content: space-between;
 
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+
   h1 {
     font-size: 1.1rem;
   }
@@ -16,4 +21,9 @@ header {
       margin: 0 0.5rem;
     }
   }
+}
+.nav-crums {
+  background: $yellow;
+  padding: 0.5rem 1rem;
+  color: $white;
 }

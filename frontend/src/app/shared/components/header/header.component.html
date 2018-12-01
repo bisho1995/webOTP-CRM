@@ -1,6 +1,13 @@
 <header>
-  <div><h1>Kisan OTP</h1></div>
+  <div>
+    <h1><a [routerLink]="['/']">Kisan OTP</a></h1>
+  </div>
   <div class="right-part">
-    <span>Docs</span> <span>Anonymous <i class="fas fa-user-circle"></i></span>
+    <a [routerLink]="['/docs']"><span>Docs</span></a>
+    <a [routerLink]="['/settings']"
+      ><span
+        ><span>Anonymous <i class="fas fa-user-circle"></i></span></span
+    ></a>
   </div>
 </header>
+<div class="nav-crums">New part</div>

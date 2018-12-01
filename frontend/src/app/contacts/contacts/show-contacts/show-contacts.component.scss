@@ -1,0 +1,41 @@
+@import "../../../../colors.scss";
+.list-contacts {
+  width: 95%;
+  max-width: 700px;
+  height: auto;
+  max-height: 80vh;
+  left: 50%;
+  transform: translate(-50%);
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    .reset {
+      background: $red;
+      color: $white;
+    }
+  }
+  table {
+    margin-top: 1rem;
+    width: 100%;
+    display: block;
+    overflow: scroll;
+  }
+  .thead {
+    background: $black;
+    color: $white;
+    text-align: center;
+    font-size: 1rem;
+
+    th {
+      width: auto;
+    }
+  }
+  tr {
+    cursor: pointer;
+
+    td {
+      width: auto;
+    }
+  }
+}

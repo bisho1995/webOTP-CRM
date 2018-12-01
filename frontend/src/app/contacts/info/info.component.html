@@ -1,4 +1,8 @@
-<p>
-  <a [routerLink]="['../']"><button>Back</button></a>
-</p>
-<app-card></app-card>
+<app-header></app-header>
+<article class="container">
+  <div class="row">
+    <div class="col-sm-3"><app-aside></app-aside></div>
+    <div class="col-sm-9"><app-card [contact]="contact"></app-card></div>
+  </div>
+</article>
+<app-footer></app-footer>

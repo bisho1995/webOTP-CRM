@@ -8,13 +8,17 @@ import { InfoComponent } from "./info/info.component";
 import { MessageComponent } from "./message/message.component";
 import { CardComponent } from "./info/card/card.component";
 import { SharedModule } from "../shared/shared.module";
+import { UploadFileComponent } from './contacts/upload-file/upload-file.component';
+import { ShowContactsComponent } from './contacts/show-contacts/show-contacts.component';
 @NgModule({
   imports: [CommonModule, ContactsRoutingModule, FormsModule, SharedModule],
   declarations: [
     ContactsComponent,
     InfoComponent,
     MessageComponent,
-    CardComponent
+    CardComponent,
+    UploadFileComponent,
+    ShowContactsComponent
   ]
 })
 export class ContactsModule {}

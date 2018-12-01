@@ -2,12 +2,23 @@
   <div class="card-body">
     <div class="row">
       <div class="col=sm-4"><img src="#" /></div>
-      <div class="col-sm-8">Firstname middlename lastname</div>
+      <div class="col-sm-8">
+        {{ contact.first_name }} {{ contact.middle_name }}
+        {{ contact.last_name }}
+      </div>
     </div>
-    <div class="row"><b>Company:</b> Kisan network</div>
-    <div class="row"><b>Email:</b> Kisan network</div>
-    <div class="row"><b>Phone:</b> 9123978452</div>
-    <div class="row"><b>Birthday:</b> Kisan network</div>
+    <div class="row">
+      <span><b>Company:</b></span> {{ contact.company }}
+    </div>
+    <div class="row">
+      <span><b>Email:</b></span> {{ contact.email }}
+    </div>
+    <div class="row">
+      <span><b>Phone:</b></span> {{ contact.phone }}
+    </div>
+    <div class="row">
+      <span><b>Birthday:</b></span> {{ contact.birthday }}
+    </div>
     <div class="row">
       <a [routerLink]="['../', 'message']"
         ><button class="btn message">Message</button></a

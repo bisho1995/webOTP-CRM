@@ -1,8 +1,18 @@
-.social-icons {
-  font-size: 1.5rem;
+@import "../../../../colors.scss";
+.page-footer {
+  padding: 2rem 0;
+  background: $light-black;
+  color: $white;
 
-  .social-icons a {
-    margin: 0 0.4rem;
-    cursor: pointer;
+  a {
+    color: $yellow;
+  }
+  .social-icons {
+    font-size: 1.5rem;
+
+    .social-icons a {
+      margin: 0 0.4rem;
+      cursor: pointer;
+    }
   }
 }

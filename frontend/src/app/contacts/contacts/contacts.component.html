@@ -1,33 +1,15 @@
 <app-header></app-header>
-<article>
-  <p>
-    <input
-      type="file"
-      id="contacts"
-      name="contacts"
-      accept=".json"
-      (change)="fileUpload($event)"
-      [(ngModel)]="file"
-    />
-  </p>
-  <div>
-    <table class="table table-striped">
-      <thead class="thead-dark">
-        <th>Sl No</th>
-        <th>First Name</th>
-        <th>Middle Name</th>
-        <th>Last Name</th>
-        <th>Phone</th>
-        <th>Email</th>
-      </thead>
-      <tr *ngFor="let contact of contacts; let i = index">
-        <td>{{ i + 1 }}</td>
-        <td>{{ contact.first_name || "__.__" }}</td>
-        <td>{{ contact.middle_name || "__.__" }}</td>
-        <td>{{ contact.last_name || "__.__" }}</td>
-        <td>{{ contact.phone || "__.__" }}</td>
-        <td>{{ contact.email || "__.__" }}</td>
-      </tr>
-    </table>
+<article class="container">
+  <div class="row">
+    <div class="col-sm-3"><app-aside></app-aside></div>
+    <div class="col-sm-9">
+      <div *ngIf="contacts.length === 0">
+        <app-upload-file></app-upload-file>
+      </div>
+      <div *ngIf="contacts.length > 0">
+        <app-show-contacts></app-show-contacts>
+      </div>
+    </div>
   </div>
 </article>
+<app-footer></app-footer>

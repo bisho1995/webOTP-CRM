@@ -24,4 +24,9 @@ export class ContactsService {
   getFileMetadata() {
     return this.file;
   }
+
+  reset() {
+    this.contacts.next([]);
+    this.file.next(null);
+  }
 }

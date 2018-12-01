@@ -1,0 +1,13 @@
+<div>
+  <header><h1>Upload File</h1></header>
+  <p>Choose a json file to get started.</p>
+  <label id="contactsLabel" for="contacts"><i class="fas fa-upload"></i></label>
+  <input
+    type="file"
+    id="contacts"
+    name="contacts"
+    accept=".json"
+    (change)="fileUpload($event)"
+    [(ngModel)]="file"
+  />
+</div>
