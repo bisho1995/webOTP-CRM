@@ -1,0 +1,19 @@
+@import "../../../../colors.scss";
+header {
+  background: $black;
+  color: $white;
+  display: flex;
+  justify-content: space-between;
+
+  h1 {
+    font-size: 1.1rem;
+  }
+  div {
+    margin: 0.5rem 1rem;
+  }
+  .right-part {
+    span {
+      margin: 0 0.5rem;
+    }
+  }
+}
