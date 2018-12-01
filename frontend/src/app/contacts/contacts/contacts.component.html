@@ -1,3 +1,32 @@
-<p>
-  contacts works!
-</p>
+<article>
+  <p>
+    <input
+      type="file"
+      id="contacts"
+      name="contacts"
+      accept=".json"
+      (change)="fileUpload($event)"
+      [(ngModel)]="file"
+    />
+  </p>
+  <div>
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <th>Sl No</th>
+        <th>First Name</th>
+        <th>Middle Name</th>
+        <th>Last Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+      </thead>
+      <tr *ngFor="let contact of contacts; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ contact.first_name || "__.__" }}</td>
+        <td>{{ contact.middle_name || "__.__" }}</td>
+        <td>{{ contact.last_name || "__.__" }}</td>
+        <td>{{ contact.phone || "__.__" }}</td>
+        <td>{{ contact.email || "__.__" }}</td>
+      </tr>
+    </table>
+  </div>
+</article>

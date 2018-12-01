@@ -1,3 +1,40 @@
 <p>
-  message works!
+  <a [routerLink]="['/contacts', 'info']"><button>Back</button></a>
+  <a [routerLink]="['/contacts']"><button>All Contacts</button></a>
 </p>
+<article>
+  <form>
+    <label for="name">Name</label>
+    <input
+      type="text"
+      name="name"
+      id="name"
+      disabled
+      value="abc"
+      class="form-control"
+    />
+    <label for="number">Number</label>
+    <input
+      id="number"
+      type="text"
+      name="number"
+      class="form-control"
+      disabled
+      value="9123978452"
+    />
+    <label for="message">Message</label>
+    <textarea
+      class="form-control"
+      id="message"
+      name="message"
+    >Here is your otp 123456</textarea>
+    <div class="text-center">
+      <input
+        type="submit"
+        value="Send message"
+        class="form-control"
+        class="btn send-message"
+      />
+    </div>
+  </form>
+</article>
