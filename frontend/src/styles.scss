@@ -13,5 +13,19 @@
     article {
       background: $white;
     }
+
+    table {
+      margin-top: 1rem;
+      width: 100%;
+      display: block;
+      overflow: scroll;
+    }
+
+    .success {
+      color: $green;
+    }
+    .failure {
+      color: $red;
+    }
   }
 }

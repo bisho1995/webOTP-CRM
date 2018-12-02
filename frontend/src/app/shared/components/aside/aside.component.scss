@@ -6,6 +6,7 @@ ul {
     background: $light-black;
     color: $white;
     padding: 5px 10px;
+    border-bottom: 1px solid $black;
 
     a {
       color: $white;
@@ -14,5 +15,11 @@ ul {
   }
   li:hover {
     background: $black;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hidden-sm {
+    display: none;
   }
 }

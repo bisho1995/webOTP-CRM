@@ -4,4 +4,11 @@ article {
   margin: 1rem;
   left: 50%;
   transform: translateX(-50%);
+
+  .green-block {
+    color: $green;
+  }
+  .red-block {
+    color: $red;
+  }
 }

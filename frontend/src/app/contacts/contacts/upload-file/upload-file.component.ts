@@ -17,7 +17,17 @@ export class UploadFileComponent implements OnInit {
     reader.onload = evt => {
       const contactsRaw = evt.target["result"];
       try {
-        const contacts = JSON.parse(contactsRaw)["contacts"];
+        const contacts = JSON.parse(contactsRaw)
+          ["contacts"].map(contact => {
+            if (contact.phone.startsWith("+"))
+              contact.phone = contact.phone.substring(1);
+            return contact;
+          })
+          .filter(contact => {
+            if (contact && contact.phone && contact.phone.length === 12)
+              return true;
+            else return false;
+          });
         this.contactService.updateContacts(contacts);
       } catch (e) {
         console.log(e);

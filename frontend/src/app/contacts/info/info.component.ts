@@ -21,7 +21,7 @@ export class InfoComponent implements OnInit {
   ngOnInit() {
     this.title.setTitle("Contact Information");
     this.contactId = this.route.snapshot.queryParams.id;
-    this.contactService.getContacts().subscribe(contacts => {
+    this.contactService.contacts.subscribe(contacts => {
       this.contact = contacts[this.contactId];
     });
   }

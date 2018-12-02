@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { Contact } from "../interface/contact";
 import { BehaviorSubject } from "rxjs";
 import { environment } from "../../../environments/environment";
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { File } from "../interface/file";
 @Injectable({
   providedIn: "root"
@@ -16,9 +16,6 @@ export class ContactsService {
   }
   updateContacts(newContacts) {
     this.contacts.next(newContacts);
-  }
-  getContacts() {
-    return this.contacts;
   }
   updateFileMetadata(metadata) {
     this.file.next(metadata);
@@ -40,7 +37,8 @@ export class ContactsService {
     birthday,
     phone,
     email,
-    company
+    company,
+    msg
   ) {
     return new Promise((resolve, reject) => {
       const body = JSON.stringify({
@@ -52,11 +50,19 @@ export class ContactsService {
         birthday,
         phone,
         email,
-        company
+        company,
+        msg
       });
-      this.http.post(environment.routes.saveOTP, body, {}).subscribe(data => {
-        console.log(data);
-      });
+      const options = {
+        headers: new HttpHeaders({
+          "Content-type": "application/json"
+        })
+      };
+      this.http
+        .post(environment.routes.saveOTP, body, options)
+        .subscribe(data => {
+          resolve(data);
+        });
     });
   }
 }

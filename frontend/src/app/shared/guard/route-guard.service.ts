@@ -9,7 +9,7 @@ import { Router } from "@angular/router";
 export class RouteGuardService implements CanActivate {
   private contacts;
   constructor(private contactService: ContactsService, private router: Router) {
-    this.contactService.getContacts().subscribe(contacts => {
+    this.contactService.contacts.subscribe(contacts => {
       this.contacts = contacts;
     });
   }

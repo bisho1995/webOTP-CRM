@@ -2,7 +2,39 @@
 <article class="container">
   <div class="row">
     <div class="col-sm-3"><app-aside></app-aside></div>
-    <div class="col-sm-9">Logs</div>
+    <div class="col-sm-9">
+      <header>
+        <div class="float-left"><h1>Logs</h1></div>
+        <div class="float-right">
+          <span class="green-block"><i class="fas fa-check"></i></span> OTP
+          processed
+          <span class="red-block"><i class="fas fa-times"></i></span> OTP
+          unprocessed
+        </div>
+      </header>
+      <table class="table table-striped">
+        <thead>
+          <th>Sl No</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Phone</th>
+          <th>Date time</th>
+          <th>OTP</th>
+        </thead>
+        <tr *ngFor="let contact of contacts; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ contact.profile.first_name }}</td>
+          <td>{{ contact.profile.last_name }}</td>
+          <td>{{ contact.profile.phone }}</td>
+          <td>{{ contact.datatime | date: "short" }}</td>
+          <td>
+            <span [ngClass]="{ success: false, failure: true }">{{
+              contact.otp
+            }}</span>
+          </td>
+        </tr>
+      </table>
+    </div>
   </div>
 </article>
 <app-footer></app-footer>
