@@ -2,12 +2,14 @@
 // `ng build ---prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+const host = "http://localhost:3000/";
+
 export const environment = {
   production: false,
   routes: {
-    saveOTP: "http://localhost:3000/save-otp",
-    generateOTP: "http://localhost:3000/generate-otp",
-    receiveOTPs: "http://localhost:3000/retrieve-otps"
+    saveOTP: `${host}save-otp`,
+    generateOTP: `${host}generate-otp`,
+    receiveOTPs: `${host}retrieve-otp`
   }
 };
 
