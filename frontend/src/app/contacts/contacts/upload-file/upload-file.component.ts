@@ -7,6 +7,7 @@ import { ContactsService } from "../../../shared/service/contacts.service";
   styleUrls: ["./upload-file.component.scss"]
 })
 export class UploadFileComponent implements OnInit {
+  file: any;
   constructor(private contactService: ContactsService) {}
 
   ngOnInit() {}
