@@ -1,12 +1,14 @@
 import express from "express";
+import "./model/db";
 import path from "path";
+import cors from "cors";
 import logger from "morgan";
 import bodyParser from "body-parser";
 import routes from "./routes";
 
 const app = express();
 app.disable("x-powered-by");
-
+app.use(cors());
 app.use(
   logger("dev", {
     skip: () => app.get("env") === "test"
@@ -19,16 +21,8 @@ app.use(express.static(path.join(__dirname, "../public")));
 // Routes
 app.use("/", routes);
 
-// Catch 404 and forward to error handler
-app.use((req, res, next) => {
-  const err = new Error("Not Found");
-  err.status = 404;
-  next(err);
-});
-
-app.use((err, req, res) => {
-  // eslint-disable-line no-unused-vars
-  res.json({ err: err.message });
+app.all("**", (req, res) => {
+  res.json({ status: "error", message: "The requested route is not found" });
 });
 
 export default app;
