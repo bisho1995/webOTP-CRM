@@ -2,7 +2,15 @@
 <article class="container">
   <div class="row">
     <div class="col-sm-3"><app-aside></app-aside></div>
-    <div class="col-sm-9"><app-card [contact]="contact"></app-card></div>
+    <div class="col-sm-9">
+      <div>
+        <a [routerLink]="['../']"
+          ><span class="go-back-icon"
+            ><i class="fas fa-arrow-left"></i></span></a
+        >Go Back
+      </div>
+      <app-card [contact]="contact"></app-card>
+    </div>
   </div>
 </article>
 <app-footer></app-footer>

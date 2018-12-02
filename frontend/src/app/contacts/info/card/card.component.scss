@@ -4,9 +4,23 @@
   max-width: 500px;
   left: 50%;
   transform: translateX(-50%);
+  padding: 0.5rem 1rem;
 
+  img {
+    height: 40px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
   span {
     margin-right: 8px;
+  }
+
+  .message-wrapper {
+    background: $gray;
+    color: $yellow;
+    padding: 2px 15px;
+    border-radius: 15px;
   }
 
   .message {

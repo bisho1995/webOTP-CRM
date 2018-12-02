@@ -4,4 +4,11 @@ article {
   margin: 1rem;
   left: 50%;
   transform: translateX(-50%);
+
+  .go-back-icon {
+    color: $yellow;
+    margin-right: 0.5rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
 }

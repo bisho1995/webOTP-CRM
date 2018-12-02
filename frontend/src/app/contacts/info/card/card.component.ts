@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: "app-card",
@@ -7,9 +8,11 @@ import { Component, OnInit, Input } from "@angular/core";
 })
 export class CardComponent implements OnInit {
   @Input() contact;
-  constructor() {}
+  public id;
+  constructor(private activatedRoute: ActivatedRoute) {}
 
   ngOnInit() {
     console.log(this.contact);
+    this.id = this.activatedRoute.snapshot.queryParams.id;
   }
 }

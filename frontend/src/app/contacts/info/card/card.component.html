@@ -1,10 +1,19 @@
 <div class="card">
   <div class="card-body">
     <div class="row">
-      <div class="col=sm-4"><img src="#" /></div>
+      <div class="col=sm-4">
+        <img
+          [src]="
+            contact.profile ||
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcgDJ4QpHybhOpmFRtCj8uTP-OLhPcplmFPgeZaiqBUxhNSDBo'
+          "
+        />
+      </div>
       <div class="col-sm-8">
-        {{ contact.first_name }} {{ contact.middle_name }}
-        {{ contact.last_name }}
+        <h1>
+          {{ contact.first_name }} {{ contact.middle_name }}
+          {{ contact.last_name }}
+        </h1>
       </div>
     </div>
     <div class="row">
@@ -14,13 +23,15 @@
       <span><b>Email:</b></span> {{ contact.email }}
     </div>
     <div class="row">
-      <span><b>Phone:</b></span> {{ contact.phone }}
+      <span><b>Phone:</b></span>
+      <span class="message-wrapper"><i class="fas fa-envelope"></i></span>
+      <b>{{ contact.phone }}</b>
     </div>
     <div class="row">
       <span><b>Birthday:</b></span> {{ contact.birthday }}
     </div>
     <div class="row">
-      <a [routerLink]="['../', 'message']"
+      <a [routerLink]="['../', 'message']" [queryParams]="{ id: id }"
         ><button class="btn message">Message</button></a
       >
     </div>
