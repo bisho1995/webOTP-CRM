@@ -26,5 +26,8 @@ export default function(req, res) {
     .then(data => {
       res.status(200).json({ status: "success", message: data });
     })
-    .catch(err => res.status(401).json({ status: "error", message: err }));
+    .catch(err => {
+      console.log(err);
+      res.status(401).json({ status: "error", message: err });
+    });
 }

@@ -29,13 +29,15 @@
               class="form-control"
               id="message"
               name="message"
-            >Here is your otp 123456</textarea>
+            >Here is your otp {{ otp }}</textarea
+            >
             <div class="text-center">
               <input
                 type="submit"
                 value="Send message"
                 class="form-control"
                 class="btn send-message"
+                (click)="sendMessage()"
               />
             </div>
           </form>

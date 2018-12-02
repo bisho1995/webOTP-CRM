@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  routes: {
+    saveOTP: "http://localhost:3000/save-otp",
+    generateOTP: "http://localhost:3000/generate-otp",
+    receiveOTPs: "http://localhost:3000/retrieve-otps"
+  }
 };
 
 /*
