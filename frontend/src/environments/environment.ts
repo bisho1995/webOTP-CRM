@@ -9,7 +9,7 @@ export const environment = {
   routes: {
     saveOTP: `${host}save-otp`,
     generateOTP: `${host}generate-otp`,
-    receiveOTPs: `${host}retrieve-otp`
+    receiveOTPs: `${host}retrieve-otps`
   }
 };
 
