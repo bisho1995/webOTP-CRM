@@ -9,11 +9,15 @@ function saveOTP(
   birthday,
   phone,
   email,
-  company
+  company,
+  msg
 ) {
+  console.log({ otp, first_name });
   return new Promise((resolve, reject) => {
     const instance = new model({
       otp: otp,
+      datetime: Date.now(),
+      msg: msg,
       profile: {
         first_name: first_name,
         middle_name: middle_name,
@@ -25,6 +29,7 @@ function saveOTP(
         company: company
       }
     });
+    // console.log({ instance });
     instance.save((err, result) => {
       if (err) reject(err);
       else resolve(result);
@@ -34,10 +39,13 @@ function saveOTP(
 
 function getOtps() {
   return new Promise((resolve, reject) => {
-    model.find({}, (err, docs) => {
-      if (err) reject(err);
-      else resolve(docs);
-    });
+    model
+      .find({})
+      .sort({ datatime: -1 })
+      .exec((err, docs) => {
+        if (err) reject(err);
+        else resolve(docs);
+      });
   });
 }
 

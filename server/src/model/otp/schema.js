@@ -10,6 +10,9 @@ const schema = new mongoose.Schema({
     type: String,
     default: Date.now()
   },
+  msg: {
+    type: String
+  },
   verified: {
     type: Boolean,
     default: false

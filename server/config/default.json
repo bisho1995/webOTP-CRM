@@ -2,5 +2,9 @@
   "database": {
     "username": "kisan",
     "password": "kisan2018"
+  },
+  "nexmo": {
+    "apiKey": "69e66ea3",
+    "apiSecret": "wmkbcvl6mknH6Lze"
   }
 }
