@@ -10,4 +10,9 @@
     ></a>
   </div>
 </header>
-<div class="nav-crums">{{ urlStr }}</div>
+<div class="nav-crums">
+  <div class="">{{ urlStr }}</div>
+  <div class="">
+    <a [routerLink]="['/settings']"><i class="fas fa-cog settings"></i></a>
+  </div>
+</div>
