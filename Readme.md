@@ -14,6 +14,8 @@ The project is hosted at https://mystifying-rosalind-2cce48.netlify.com/
 
 The project has 3 folders. The frontend code is in frontend folder. The backend code (nodejs code) is in server folder. The sample has a sample JSON for the list of contacts.
 
+I have also included lazy loading of the modules to increase the site load time. In netlify does not have top class performance but in production server this will run just fine.
+
 # Where each part is hosted
 
 1. frontend => netlify
