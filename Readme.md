@@ -37,4 +37,10 @@ The project has 3 folders. The frontend code is in frontend folder. The backend 
 
 # Afterthoughts
 
+Due to constraints of time as the entire coding was done in 48 hours there are a few loose ends. The overall project was quite interesting as I got to play with sms api.
+Looking forward to more such interesting challenges.
+
 # Developer information
+
+Name: Bisvarup Mukherjee
+Email: bisvarup.mukherjee@gmail.com
