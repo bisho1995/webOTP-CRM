@@ -40,6 +40,8 @@ The project has 3 folders. The frontend code is in frontend folder. The backend 
 Due to constraints of time as the entire coding was done in 48 hours there are a few loose ends. The overall project was quite interesting as I got to play with sms api.
 Looking forward to more such interesting challenges.
 
+The nexmo api is a bit unstable but in production when we pay for their service I am assuming it will work fine.
+
 # Developer information
 
 Name: Bisvarup Mukherjee

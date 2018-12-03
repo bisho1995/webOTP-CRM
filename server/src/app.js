@@ -24,5 +24,4 @@ app.use("/", routes);
 app.all("**", (req, res) => {
   res.json({ status: "error", message: "The requested route is not found" });
 });
-import "./helper/messaging";
 export default app;
