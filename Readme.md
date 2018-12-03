@@ -2,6 +2,9 @@
 
 The project is hosted at https://mystifying-rosalind-2cce48.netlify.com/
 
+<br>
+Video proof https://www.youtube.com/watch?v=NXFZIE5UHVg&feature=youtu.be
+
 # Tech Stack
 
 1. Angular 6 for the frontend.
